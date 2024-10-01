@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/normal.dir/normalFunctions.cpp.o -o normal  libtarget.a 

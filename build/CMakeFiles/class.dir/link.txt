@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/class.dir/classMemberFunctions.cpp.o -o class  libtarget.a 
