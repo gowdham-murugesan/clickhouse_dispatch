@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/multiple.dir/normalMultiple.cpp.o -o multiple  libtarget.a 
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/multiple.dir/normalMultiple.cpp.o -o multiple  libtarget.a 

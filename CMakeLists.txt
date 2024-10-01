@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.22.1)
 
 project(dispatch)
 
-set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_BUILD_TYPE Release)
 
 option(ENABLE_MULTITARGET_CODE "Enable platform-dependent code" ON)
 if (ENABLE_MULTITARGET_CODE)
@@ -11,7 +11,7 @@ else()
 add_definitions(-DENABLE_MULTITARGET_CODE=0)
 endif()
 
-# add_compile_options(-O3 -march=native -funroll-loops -fopt-info-vec)
+add_compile_options(-O3)
 
 add_library(target ./TargetSpecific.cpp)
 add_executable(normal ./normalFunctions.cpp)
