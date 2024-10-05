@@ -73,15 +73,15 @@ CMakeFiles/multiple.dir/normalMultiple.cpp.o: CMakeFiles/multiple.dir/flags.make
 CMakeFiles/multiple.dir/normalMultiple.cpp.o: /home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalMultiple.cpp
 CMakeFiles/multiple.dir/normalMultiple.cpp.o: CMakeFiles/multiple.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/multiple.dir/normalMultiple.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/multiple.dir/normalMultiple.cpp.o -MF CMakeFiles/multiple.dir/normalMultiple.cpp.o.d -o CMakeFiles/multiple.dir/normalMultiple.cpp.o -c /home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalMultiple.cpp
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/multiple.dir/normalMultiple.cpp.o -MF CMakeFiles/multiple.dir/normalMultiple.cpp.o.d -o CMakeFiles/multiple.dir/normalMultiple.cpp.o -c /home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalMultiple.cpp
 
 CMakeFiles/multiple.dir/normalMultiple.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/multiple.dir/normalMultiple.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalMultiple.cpp > CMakeFiles/multiple.dir/normalMultiple.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalMultiple.cpp > CMakeFiles/multiple.dir/normalMultiple.cpp.i
 
 CMakeFiles/multiple.dir/normalMultiple.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/multiple.dir/normalMultiple.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalMultiple.cpp -o CMakeFiles/multiple.dir/normalMultiple.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalMultiple.cpp -o CMakeFiles/multiple.dir/normalMultiple.cpp.s
 
 # Object files for target multiple
 multiple_OBJECTS = \

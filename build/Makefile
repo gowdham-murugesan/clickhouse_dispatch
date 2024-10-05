@@ -168,6 +168,19 @@ class/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/class.dir/build.make CMakeFiles/class.dir/build
 .PHONY : class/fast
 
+#=============================================================================
+# Target rules for targets named preprocess
+
+# Build rule for target.
+preprocess: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preprocess
+.PHONY : preprocess
+
+# fast build rule for target.
+preprocess/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/preprocess.dir/build.make CMakeFiles/preprocess.dir/build
+.PHONY : preprocess/fast
+
 TargetSpecific.o: TargetSpecific.cpp.o
 .PHONY : TargetSpecific.o
 
@@ -272,6 +285,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... preprocess"
 	@echo "... class"
 	@echo "... multiple"
 	@echo "... normal"

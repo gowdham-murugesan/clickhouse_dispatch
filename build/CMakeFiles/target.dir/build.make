@@ -73,15 +73,15 @@ CMakeFiles/target.dir/TargetSpecific.cpp.o: CMakeFiles/target.dir/flags.make
 CMakeFiles/target.dir/TargetSpecific.cpp.o: /home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/TargetSpecific.cpp
 CMakeFiles/target.dir/TargetSpecific.cpp.o: CMakeFiles/target.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/target.dir/TargetSpecific.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/target.dir/TargetSpecific.cpp.o -MF CMakeFiles/target.dir/TargetSpecific.cpp.o.d -o CMakeFiles/target.dir/TargetSpecific.cpp.o -c /home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/TargetSpecific.cpp
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/target.dir/TargetSpecific.cpp.o -MF CMakeFiles/target.dir/TargetSpecific.cpp.o.d -o CMakeFiles/target.dir/TargetSpecific.cpp.o -c /home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/TargetSpecific.cpp
 
 CMakeFiles/target.dir/TargetSpecific.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/target.dir/TargetSpecific.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/TargetSpecific.cpp > CMakeFiles/target.dir/TargetSpecific.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/TargetSpecific.cpp > CMakeFiles/target.dir/TargetSpecific.cpp.i
 
 CMakeFiles/target.dir/TargetSpecific.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/target.dir/TargetSpecific.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/TargetSpecific.cpp -o CMakeFiles/target.dir/TargetSpecific.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/TargetSpecific.cpp -o CMakeFiles/target.dir/TargetSpecific.cpp.s
 
 # Object files for target target
 target_OBJECTS = \

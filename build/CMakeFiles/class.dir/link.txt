@@ -1,1 +1,1 @@
-/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/class.dir/classMemberFunctions.cpp.o -o class  libtarget.a 
+/usr/bin/clang++ -O3 -DNDEBUG CMakeFiles/class.dir/classMemberFunctions.cpp.o -o class  libtarget.a 

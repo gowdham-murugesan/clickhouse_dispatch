@@ -73,15 +73,15 @@ CMakeFiles/class.dir/classMemberFunctions.cpp.o: CMakeFiles/class.dir/flags.make
 CMakeFiles/class.dir/classMemberFunctions.cpp.o: /home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/classMemberFunctions.cpp
 CMakeFiles/class.dir/classMemberFunctions.cpp.o: CMakeFiles/class.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/class.dir/classMemberFunctions.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/class.dir/classMemberFunctions.cpp.o -MF CMakeFiles/class.dir/classMemberFunctions.cpp.o.d -o CMakeFiles/class.dir/classMemberFunctions.cpp.o -c /home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/classMemberFunctions.cpp
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/class.dir/classMemberFunctions.cpp.o -MF CMakeFiles/class.dir/classMemberFunctions.cpp.o.d -o CMakeFiles/class.dir/classMemberFunctions.cpp.o -c /home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/classMemberFunctions.cpp
 
 CMakeFiles/class.dir/classMemberFunctions.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/class.dir/classMemberFunctions.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/classMemberFunctions.cpp > CMakeFiles/class.dir/classMemberFunctions.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/classMemberFunctions.cpp > CMakeFiles/class.dir/classMemberFunctions.cpp.i
 
 CMakeFiles/class.dir/classMemberFunctions.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/class.dir/classMemberFunctions.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/classMemberFunctions.cpp -o CMakeFiles/class.dir/classMemberFunctions.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/classMemberFunctions.cpp -o CMakeFiles/class.dir/classMemberFunctions.cpp.s
 
 # Object files for target class
 class_OBJECTS = \

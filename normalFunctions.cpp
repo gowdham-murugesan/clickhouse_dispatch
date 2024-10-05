@@ -48,6 +48,10 @@ int main()
     {
         TargetSpecific::AVX2::funcImpl(a, b, result, size);
     }
+    else
+    {
+        TargetSpecific::Default::funcImpl(a, b, result, size);
+    }
 #else
     TargetSpecific::Default::funcImpl(a, b, result, size);
 #endif

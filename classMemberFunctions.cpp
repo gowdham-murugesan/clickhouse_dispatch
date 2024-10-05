@@ -18,6 +18,7 @@ public:
 
     void testFunction(int *a, int *b, int *result, int size)
     {
+#if USE_MULTITARGET_CODE
         if (isArchSupported(DB::TargetArch::AVX512BW))
         {
             std::cout << DB::toString(DB::TargetArch::AVX512BW) << std::endl;
@@ -43,6 +44,10 @@ public:
             std::cout << DB::toString(DB::TargetArch::Default) << std::endl;
             testFunctionImpl(a, b, result, size);
         }
+#else
+        std::cout << DB::toString(DB::TargetArch::Default) << std::endl;
+        testFunctionImpl(a, b, result, size);
+#endif
     }
 };
 
