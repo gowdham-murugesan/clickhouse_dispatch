@@ -9,14 +9,15 @@ class TestClass
 {
 public:
     MULTITARGET_FUNCTION_AVX512BW_AVX512F_AVX2_SSE42(
-        MULTITARGET_FUNCTION_HEADER(void), testFunctionImpl, MULTITARGET_FUNCTION_BODY((int *a, int *b, int *result, int size) {
+        MULTITARGET_FUNCTION_HEADER(template <typename T> void), testFunctionImpl, MULTITARGET_FUNCTION_BODY((const T *a, const T *b, T *result, int size) {
             for (int i = 0; i < size; ++i)
             {
                 result[i] = a[i] + b[i];
             }
         }))
-
-    void testFunction(int *a, int *b, int *result, int size)
+        
+    template <typename T>
+    void testFunction(const T *a, const T *b, T *result, int size)
     {
 #if USE_MULTITARGET_CODE
         if (isArchSupported(DB::TargetArch::AVX512BW))

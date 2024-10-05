@@ -70083,7 +70083,7 @@ _xresldtrk (void)
 class TestClass
 {
 public:
-    void __attribute__((target("sse,sse2,sse3,ssse3,sse4,popcnt,avx,avx2,avx512f,avx512bw"))) testFunctionImplAVX512BW (int *a, int *b, int *result, int size) { for (int i = 0; i < size; ++i) { result[i] = a[i] + b[i]; } } void __attribute__((target("sse,sse2,sse3,ssse3,sse4,popcnt,avx,avx2,avx512f"))) testFunctionImplAVX512F (int *a, int *b, int *result, int size) { for (int i = 0; i < size; ++i) { result[i] = a[i] + b[i]; } } void __attribute__((target("sse,sse2,sse3,ssse3,sse4,popcnt,avx,avx2,bmi2"))) testFunctionImplAVX2 (int *a, int *b, int *result, int size) { for (int i = 0; i < size; ++i) { result[i] = a[i] + b[i]; } } void __attribute__((target("sse,sse2,sse3,ssse3,sse4,popcnt"))) testFunctionImplSSE42 (int *a, int *b, int *result, int size) { for (int i = 0; i < size; ++i) { result[i] = a[i] + b[i]; } } void testFunctionImpl (int *a, int *b, int *result, int size) { for (int i = 0; i < size; ++i) { result[i] = a[i] + b[i]; } }
+    template <typename T> void __attribute__((target("sse,sse2,sse3,ssse3,sse4,popcnt,avx,avx2,avx512f,avx512bw"))) testFunctionImplAVX512BW (const T *a, const T *b, T *result, int size) { for (int i = 0; i < size; ++i) { result[i] = a[i] + b[i]; } } template <typename T> void __attribute__((target("sse,sse2,sse3,ssse3,sse4,popcnt,avx,avx2,avx512f"))) testFunctionImplAVX512F (const T *a, const T *b, T *result, int size) { for (int i = 0; i < size; ++i) { result[i] = a[i] + b[i]; } } template <typename T> void __attribute__((target("sse,sse2,sse3,ssse3,sse4,popcnt,avx,avx2,bmi2"))) testFunctionImplAVX2 (const T *a, const T *b, T *result, int size) { for (int i = 0; i < size; ++i) { result[i] = a[i] + b[i]; } } template <typename T> void __attribute__((target("sse,sse2,sse3,ssse3,sse4,popcnt"))) testFunctionImplSSE42 (const T *a, const T *b, T *result, int size) { for (int i = 0; i < size; ++i) { result[i] = a[i] + b[i]; } } template <typename T> void testFunctionImpl (const T *a, const T *b, T *result, int size) { for (int i = 0; i < size; ++i) { result[i] = a[i] + b[i]; } }
 
 
 
@@ -70091,7 +70091,8 @@ public:
 
 
 
-    void testFunction(int *a, int *b, int *result, int size)
+    template <typename T>
+    void testFunction(const T *a, const T *b, T *result, int size)
     {
 
         if (isArchSupported(DB::TargetArch::AVX512BW))

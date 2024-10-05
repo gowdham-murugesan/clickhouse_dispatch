@@ -6,7 +6,8 @@
 #endif
 
 DECLARE_DEFAULT_CODE(
-    void funcImpl(int *a, int *b, int *result, int size) {
+    template <typename T>
+    void funcImpl(const T *a, const T *b, T *result, int size) {
         for (int i = 0; i < size; ++i)
         {
             result[i] = a[i] + b[i];
@@ -15,7 +16,8 @@ DECLARE_DEFAULT_CODE(
     }) // DECLARE_DEFAULT_CODE
 
 DECLARE_SSE42_SPECIFIC_CODE(
-    void funcImpl(int *a, int *b, int *result, int size) {
+    template <typename T>
+    void funcImpl(const T *a, const T *b, T *result, int size) {
         for (int i = 0; i < size; ++i)
         {
             result[i] = a[i] + b[i];
@@ -24,7 +26,8 @@ DECLARE_SSE42_SPECIFIC_CODE(
     }) // DECLARE_SSE42_SPECIFIC_CODE
 
 DECLARE_AVX2_SPECIFIC_CODE(
-    void funcImpl(int *a, int *b, int *result, int size) {
+    template <typename T>
+    void funcImpl(const T *a, const T *b, T *result, int size) {
         for (int i = 0; i < size; ++i)
         {
             result[i] = a[i] + b[i];

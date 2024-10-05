@@ -70080,41 +70080,20 @@ _xresldtrk (void)
 # 6 "/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalFunctions.cpp" 2
 
 
-namespace TargetSpecific::Default { using namespace DB::TargetSpecific::Default; void funcImpl(int *a, int *b, int *result, int size) { for (int i = 0; i < size; ++i) { result[i] = a[i] + b[i]; } std::cout << toString(BuildArch) << std::endl; } }
-
-
-
-
-
-
-
-
+namespace TargetSpecific::Default { using namespace DB::TargetSpecific::Default; template <typename T> void funcImpl(const T *a, const T *b, T *result, int size) { for (int i = 0; i < size; ++i) { result[i] = a[i] + b[i]; } std::cout << toString(BuildArch) << std::endl; } }
+# 18 "/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalFunctions.cpp"
 #pragma clang attribute push(__attribute__((target("sse,sse2,sse3,ssse3,sse4,popcnt"))),apply_to=function)
-# 17 "/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalFunctions.cpp"
- namespace TargetSpecific::SSE42 { [[maybe_unused]] void _dummy_function_definition(); using namespace DB::TargetSpecific::SSE42; void funcImpl(int *a, int *b, int *result, int size) { for (int i = 0; i < size; ++i) { result[i] = a[i] + b[i]; } std::cout << toString(BuildArch) << std::endl; } }
-# 17 "/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalFunctions.cpp"
+# 18 "/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalFunctions.cpp"
+ namespace TargetSpecific::SSE42 { [[maybe_unused]] void _dummy_function_definition(); using namespace DB::TargetSpecific::SSE42; template <typename T> void funcImpl(const T *a, const T *b, T *result, int size) { for (int i = 0; i < size; ++i) { result[i] = a[i] + b[i]; } std::cout << toString(BuildArch) << std::endl; } }
+# 18 "/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalFunctions.cpp"
 #pragma clang attribute pop
-
-
-
-
-
-
-
-
+# 28 "/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalFunctions.cpp"
 #pragma clang attribute push(__attribute__((target("sse,sse2,sse3,ssse3,sse4,popcnt,avx,avx2,bmi2"))),apply_to=function)
-# 26 "/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalFunctions.cpp"
- namespace TargetSpecific::AVX2 { [[maybe_unused]] void _dummy_function_definition(); using namespace DB::TargetSpecific::AVX2; void funcImpl(int *a, int *b, int *result, int size) { for (int i = 0; i < size; ++i) { result[i] = a[i] + b[i]; } std::cout << toString(BuildArch) << std::endl; } }
-# 26 "/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalFunctions.cpp"
+# 28 "/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalFunctions.cpp"
+ namespace TargetSpecific::AVX2 { [[maybe_unused]] void _dummy_function_definition(); using namespace DB::TargetSpecific::AVX2; template <typename T> void funcImpl(const T *a, const T *b, T *result, int size) { for (int i = 0; i < size; ++i) { result[i] = a[i] + b[i]; } std::cout << toString(BuildArch) << std::endl; } }
+# 28 "/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalFunctions.cpp"
 #pragma clang attribute pop
-
-
-
-
-
-
-
-
+# 38 "/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalFunctions.cpp"
 int main()
 {
     int size = 32;

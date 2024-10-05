@@ -70080,57 +70080,50 @@ _xresldtrk (void)
 # 6 "/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalMultiple.cpp" 2
 
 
-namespace TargetSpecific::Default { using namespace DB::TargetSpecific::Default; void funcImpl(int *a, int *b, int *result, int size) { for (int i = 0; i < size; ++i) { result[i] = a[i] + b[i]; } std::cout << toString(BuildArch) << std::endl; } }
+namespace TargetSpecific::Default { using namespace DB::TargetSpecific::Default; template <typename T> void funcImpl(const T *a, const T *b, T *result, int size) { for (int i = 0; i < size; ++i) { result[i] = a[i] + b[i]; } std::cout << toString(BuildArch) << std::endl; } }
 # 8 "/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalMultiple.cpp"
 #pragma clang attribute push(__attribute__((target("sse,sse2,sse3,ssse3,sse4,popcnt"))),apply_to=function)
 # 8 "/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalMultiple.cpp"
- namespace TargetSpecific::SSE42 { [[maybe_unused]] void _dummy_function_definition(); using namespace DB::TargetSpecific::SSE42; void funcImpl(int *a, int *b, int *result, int size) { for (int i = 0; i < size; ++i) { result[i] = a[i] + b[i]; } std::cout << toString(BuildArch) << std::endl; } }
+ namespace TargetSpecific::SSE42 { [[maybe_unused]] void _dummy_function_definition(); using namespace DB::TargetSpecific::SSE42; template <typename T> void funcImpl(const T *a, const T *b, T *result, int size) { for (int i = 0; i < size; ++i) { result[i] = a[i] + b[i]; } std::cout << toString(BuildArch) << std::endl; } }
 # 8 "/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalMultiple.cpp"
 #pragma clang attribute pop
 # 8 "/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalMultiple.cpp"
 #pragma clang attribute push(__attribute__((target("sse,sse2,sse3,ssse3,sse4,popcnt,avx"))),apply_to=function)
 # 8 "/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalMultiple.cpp"
- namespace TargetSpecific::AVX { [[maybe_unused]] void _dummy_function_definition(); using namespace DB::TargetSpecific::AVX; void funcImpl(int *a, int *b, int *result, int size) { for (int i = 0; i < size; ++i) { result[i] = a[i] + b[i]; } std::cout << toString(BuildArch) << std::endl; } }
+ namespace TargetSpecific::AVX { [[maybe_unused]] void _dummy_function_definition(); using namespace DB::TargetSpecific::AVX; template <typename T> void funcImpl(const T *a, const T *b, T *result, int size) { for (int i = 0; i < size; ++i) { result[i] = a[i] + b[i]; } std::cout << toString(BuildArch) << std::endl; } }
 # 8 "/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalMultiple.cpp"
 #pragma clang attribute pop
 # 8 "/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalMultiple.cpp"
 #pragma clang attribute push(__attribute__((target("sse,sse2,sse3,ssse3,sse4,popcnt,avx,avx2,bmi2"))),apply_to=function)
 # 8 "/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalMultiple.cpp"
- namespace TargetSpecific::AVX2 { [[maybe_unused]] void _dummy_function_definition(); using namespace DB::TargetSpecific::AVX2; void funcImpl(int *a, int *b, int *result, int size) { for (int i = 0; i < size; ++i) { result[i] = a[i] + b[i]; } std::cout << toString(BuildArch) << std::endl; } }
+ namespace TargetSpecific::AVX2 { [[maybe_unused]] void _dummy_function_definition(); using namespace DB::TargetSpecific::AVX2; template <typename T> void funcImpl(const T *a, const T *b, T *result, int size) { for (int i = 0; i < size; ++i) { result[i] = a[i] + b[i]; } std::cout << toString(BuildArch) << std::endl; } }
 # 8 "/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalMultiple.cpp"
 #pragma clang attribute pop
 # 8 "/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalMultiple.cpp"
 #pragma clang attribute push(__attribute__((target("sse,sse2,sse3,ssse3,sse4,popcnt,avx,avx2,avx512f"))),apply_to=function)
 # 8 "/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalMultiple.cpp"
- namespace TargetSpecific::AVX512F { [[maybe_unused]] void _dummy_function_definition(); using namespace DB::TargetSpecific::AVX512F; void funcImpl(int *a, int *b, int *result, int size) { for (int i = 0; i < size; ++i) { result[i] = a[i] + b[i]; } std::cout << toString(BuildArch) << std::endl; } }
+ namespace TargetSpecific::AVX512F { [[maybe_unused]] void _dummy_function_definition(); using namespace DB::TargetSpecific::AVX512F; template <typename T> void funcImpl(const T *a, const T *b, T *result, int size) { for (int i = 0; i < size; ++i) { result[i] = a[i] + b[i]; } std::cout << toString(BuildArch) << std::endl; } }
 # 8 "/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalMultiple.cpp"
 #pragma clang attribute pop
 # 8 "/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalMultiple.cpp"
 #pragma clang attribute push(__attribute__((target("sse,sse2,sse3,ssse3,sse4,popcnt,avx,avx2,avx512f,avx512bw"))),apply_to=function)
 # 8 "/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalMultiple.cpp"
- namespace TargetSpecific::AVX512BW { [[maybe_unused]] void _dummy_function_definition(); using namespace DB::TargetSpecific::AVX512BW; void funcImpl(int *a, int *b, int *result, int size) { for (int i = 0; i < size; ++i) { result[i] = a[i] + b[i]; } std::cout << toString(BuildArch) << std::endl; } }
+ namespace TargetSpecific::AVX512BW { [[maybe_unused]] void _dummy_function_definition(); using namespace DB::TargetSpecific::AVX512BW; template <typename T> void funcImpl(const T *a, const T *b, T *result, int size) { for (int i = 0; i < size; ++i) { result[i] = a[i] + b[i]; } std::cout << toString(BuildArch) << std::endl; } }
 # 8 "/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalMultiple.cpp"
 #pragma clang attribute pop
 # 8 "/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalMultiple.cpp"
 #pragma clang attribute push(__attribute__((target("sse,sse2,sse3,ssse3,sse4,popcnt,avx,avx2,avx512f,avx512bw,avx512vl,avx512vbmi"))),apply_to=function)
 # 8 "/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalMultiple.cpp"
- namespace TargetSpecific::AVX512VBMI { [[maybe_unused]] void _dummy_function_definition(); using namespace DB::TargetSpecific::AVX512VBMI; void funcImpl(int *a, int *b, int *result, int size) { for (int i = 0; i < size; ++i) { result[i] = a[i] + b[i]; } std::cout << toString(BuildArch) << std::endl; } }
+ namespace TargetSpecific::AVX512VBMI { [[maybe_unused]] void _dummy_function_definition(); using namespace DB::TargetSpecific::AVX512VBMI; template <typename T> void funcImpl(const T *a, const T *b, T *result, int size) { for (int i = 0; i < size; ++i) { result[i] = a[i] + b[i]; } std::cout << toString(BuildArch) << std::endl; } }
 # 8 "/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalMultiple.cpp"
 #pragma clang attribute pop
 # 8 "/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalMultiple.cpp"
 #pragma clang attribute push(__attribute__((target("sse,sse2,sse3,ssse3,sse4,popcnt,avx,avx2,avx512f,avx512bw,avx512vl,avx512vbmi,avx512vbmi2"))),apply_to=function)
 # 8 "/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalMultiple.cpp"
- namespace TargetSpecific::AVX512VBMI2 { [[maybe_unused]] void _dummy_function_definition(); using namespace DB::TargetSpecific::AVX512VBMI2; void funcImpl(int *a, int *b, int *result, int size) { for (int i = 0; i < size; ++i) { result[i] = a[i] + b[i]; } std::cout << toString(BuildArch) << std::endl; } }
+ namespace TargetSpecific::AVX512VBMI2 { [[maybe_unused]] void _dummy_function_definition(); using namespace DB::TargetSpecific::AVX512VBMI2; template <typename T> void funcImpl(const T *a, const T *b, T *result, int size) { for (int i = 0; i < size; ++i) { result[i] = a[i] + b[i]; } std::cout << toString(BuildArch) << std::endl; } }
 # 8 "/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalMultiple.cpp"
 #pragma clang attribute pop
-
-
-
-
-
-
-
-
+# 18 "/home/gowdham-pt7685/Gowdham/Dispatch_clickhouse/normalMultiple.cpp"
 int main()
 {
     int size = 32;

@@ -6,7 +6,8 @@
 #endif
 
 DECLARE_MULTITARGET_CODE(
-    void funcImpl(int *a, int *b, int *result, int size) {
+    template <typename T>
+    void funcImpl(const T *a, const T *b, T *result, int size) {
         for (int i = 0; i < size; ++i)
         {
             result[i] = a[i] + b[i];
